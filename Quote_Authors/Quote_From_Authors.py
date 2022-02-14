@@ -12,18 +12,16 @@ import pandas as pd
 import datetime
 import smtplib
 from email.message import EmailMessage
-
-
 import random
 from quote import quote
 
 
 
-mlist = ["leo tolstoy", "simon sinek", "Paulo Coelho", "Stephen Covey", "Tony Robbins", "Mark Twain", "Fyodor Dostoevsky", "Lao Tzu", "Sun Tzu"]
+mylist = ["leo tolstoy", "simon sinek", "Paulo Coelho", "Stephen Covey", "Tony Robbins", "Mark Twain", "Fyodor Dostoevsky", "Lao Tzu", "Sun Tzu"]
 
-def my_function1():
+def quote_generate():
     
-    search = random.choice(mlist)
+    search = random.choice(mylist)
     result = quote(search, limit=1)
 
     df = pd.DataFrame(result)
@@ -33,7 +31,7 @@ def my_function1():
 
 
 
-quote_result = my_function1()
+quote_result = quote_generate()
 
 
 
